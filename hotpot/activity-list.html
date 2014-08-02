@@ -68,8 +68,8 @@
               $('.title', el).on('click tap', function() {
                 angular.element('.content').filter(function() {
                     return angular.element(this).css('display') != 'none';
-                }).toggle('normal');
-                angular.element('.content', el).toggle('normal');
+                }).toggle('fast');
+                angular.element('.content', el).toggle('fast');
               });
             }
 
