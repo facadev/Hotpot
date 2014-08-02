@@ -4,24 +4,25 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.container {
-  position: relative;
+.content {
   float: left;
   clear: both;
   width: 100%;
-  height: 77px;
-  background-color: rgb(255, 255, 255);
+  height: 136px;
 }
 
-.container .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.container .text {
-  position: relative;
+.content .image {
   float: left;
+  width: 100%;
+}
+
+.content .text {
+  clear: both;
+  width: 83.5416666666%;
+  margin: 5px 0 0 8.22917%;
+  font-size: 1em;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
 }
 
 .element {
@@ -32,10 +33,20 @@ body {
   background-color: rgb(235, 105, 65);
 }
 
+.element .image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 33px;
+  margin: auto 0;
+}
+
 .element .text {
   display: inline-block;
+  position: relative;
+  z-index: 0;
   width: 100%;
-  margin: 11px auto 0;
+  margin-top: 11px;
   font-size: 1.25em;
   font-weight: 400;
   text-align: center;
@@ -44,20 +55,46 @@ body {
 
 .image {
   display: block;
-  width: 100%;
   height: auto;
   overflow: hidden;
 }
 
+.list-item {
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 213px;
+}
+
 .text {
+  float: left;
   line-height: 1.38;
+}
+
+.title {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 77px;
+  background-color: rgb(255, 255, 255);
+}
+
+.title .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.title .text {
+  position: relative;
 }
 
 ._button {
   display: block;
   position: relative;
   float: left;
-  z-index: 7;
+  z-index: 14;
   width: 18.9583333333%;
   height: 40px;
   margin: -40px 0 0 52.70508%;
@@ -71,26 +108,35 @@ body {
 }
 
 .image-1 {
-  z-index: 6;
+  left: 5%;
+  z-index: 3;
 }
 
 .image-2 {
-  z-index: 5;
+  right: 14.1731770833%;
+  z-index: 2;
 }
 
 .image-3 {
-  float: left;
-  clear: both;
+  right: 4.375%;
+  z-index: 1;
 }
 
 .image-4 {
-  float: left;
+  z-index: 13;
+}
+
+.image-5 {
+  z-index: 12;
+}
+
+.image-7 {
   clear: both;
   margin-top: 14px;
 }
 
 .text-2 {
-  z-index: 2;
+  z-index: 9;
   width: 40.4166666666%;
   min-height: 40px;
   margin: 23px 0 0 7.29167%;
@@ -101,7 +147,7 @@ body {
 
 .text-3 {
   clear: both;
-  z-index: 3;
+  z-index: 10;
   width: 14.3749999999%;
   min-height: 30px;
   margin: -14px 0 0 7.29167%;
@@ -111,19 +157,11 @@ body {
 }
 
 .text-4 {
-  z-index: 4;
+  z-index: 11;
   width: 14.3749999999%;
   min-height: 30px;
   margin: -40px 0 0 30.51758%;
   font-size: 1em;
   font-weight: 400;
   color: rgb(219, 219, 219);
-}
-
-.text-5 {
-  width: 83.5416666666%;
-  margin: 149px auto 0;
-  font-size: 1em;
-  font-weight: 400;
-  color: rgb(0, 0, 0);
 }
