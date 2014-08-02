@@ -3,14 +3,14 @@ body {
   background: url('../images/QQ%E5%9B%BE%E7%89%8720140802145501.png') rgb(255, 255, 255);
   background-size: cover;
   background-position: 0% -30px;
-  font: 400 1.813em/1.38 Helvetica;
+  font: 400 0.875em/1.38 Helvetica;
   color: rgb(0, 0, 0);
 }
 
 .element {
   float: left;
   width: 100%;
-  height: 66px;
+  height: 44px;
   background-color: rgb(235, 105, 65);
 }
 
@@ -28,7 +28,7 @@ body {
   clear: both;
   width: 40.4166666666%;
   min-height: 40px;
-  margin: 25px 0 0 7.5%;
+  margin: 9px 0 0 7.5%;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.38;
