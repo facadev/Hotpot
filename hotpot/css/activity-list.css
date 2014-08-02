@@ -25,7 +25,8 @@ body {
 }
 
 .element {
-  position: relative;
+  position: fixed;
+  z-index: 300;
   float: left;
   width: 100%;
   height: 47px;
