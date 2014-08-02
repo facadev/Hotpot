@@ -26,14 +26,14 @@
         <div class="title clearfix">
       <img class="image image-4" src="images/jigsaw2.png">
       <img class="image image-5" src="images/jigsaw.png">
-      <p class="text text-2">{{activity.name}}</p>
+      <p class="text text-2" ng-bind="activity.name"></p>
       <p class="text text-3">3天后</p>
-      <p class="text text-4">{{activity.people_count}}/{{activity.limit_count}}</p>
+      <p class="text text-4"><span ng-bind="activity.people_count"></span>/<span ng-bind="activity.limit_count"></span></p>
       <button class="_button">退出</button>
     </div>
     <div class="content clearfix">
       <img class="image" src="images/jigsaw3.png">
-      <p class="text">{{activity.content}}</p>
+      <p class="text" ng-bind="activity.content"></p>
       <img class="image image-7" src="images/jigsaw4.png">
     </div>
   </collapsed-list-item>
