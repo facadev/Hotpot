@@ -12,7 +12,7 @@
       font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', 'STHeiti';
       user-select: none;
       -webkit-user-select: none;
-      -moz-user-select:none;
+      -moz-user-select: none;
     }
     ._input {
       width: calc(100% - 52px);
@@ -27,22 +27,24 @@
     <img class="image image-2" src="images/filter.png">
     <img class="image image-3" src="images/add.png">
   </div>
-  <collapsed-list-item ng-repeat="activity in activities.v" class="list-item clearfix">
-    <div class="title clearfix">
-      <img class="image image-4" src="images/jigsaw2.png">
-      <img class="image image-5" src="images/jigsaw.png">
-      <p class="text text-2" ng-bind="activity.name"></p>
-      <p class="text text-3">3天后</p>
-      <p class="text text-4"><span ng-bind="activity.people_count"></span>/<span ng-bind="activity.limit_count"></span>
-      </p>
-      <button class="_button">退出</button>
-    </div>
-    <div style="display:none" class="content clearfix" tag="{{activity.id}}">
-      <img class="image" src="images/jigsaw3.png">
-      <p class="text" ng-bind="activity.content"></p>
-      <img class="image image-7" src="images/jigsaw4.png">
-    </div>
-  </collapsed-list-item>
+  <div class="wrapper">
+    <collapsed-list-item ng-repeat="activity in activities.v" class="list-item clearfix">
+      <div class="title clearfix">
+        <img class="image image-4" src="images/jigsaw2.png">
+        <img class="image image-5" src="images/jigsaw.png">
+        <p class="text text-2" ng-bind="activity.name"></p>
+        <p class="text text-3">3天后</p>
+        <p class="text text-4"><span ng-bind="activity.people_count"></span>/<span ng-bind="activity.limit_count"></span>
+        </p>
+        <button class="_button">退出</button>
+      </div>
+      <div style="display:none" class="content clearfix" tag="{{activity.id}}">
+        <img class="image" src="images/jigsaw3.png">
+        <p class="text" ng-bind="activity.content"></p>
+        <img class="image image-7" src="images/jigsaw4.png">
+      </div>
+    </collapsed-list-item>
+  </div>
 
   <script type="text/ng-template" id="collapsedListItemTemplate.htm">
   </script>
@@ -72,7 +74,7 @@
                 angular.element('.content', el).toggle('fast');
                 var currentTag = angular.element('.content', el).attr('tag');
                 angular.element('.content').filter(function() {
-                    return angular.element(this).css('display') != 'none' && angular.element(this).attr('tag') != currentTag;
+                  return angular.element(this).css('display') != 'none' && angular.element(this).attr('tag') != currentTag;
                 }).toggle('fast');
               });
             }
