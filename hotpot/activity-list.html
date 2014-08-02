@@ -10,6 +10,9 @@
   <style>
     body {
       font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', 'STHeiti';
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select:none;
     }
     ._input {
       width: calc(100% - 52px);
@@ -17,7 +20,7 @@
   </style>
 </head>
 
-<body class="body activity-list clearfix" ng-controller="activityListCtrl">
+<body class="body activity-list clearfix" unselectable="true" ng-controller="activityListCtrl">
   <div class="element clearfix">
     <p class="text">活动列表</p>
     <img class="image image-1" src="images/back.png">
@@ -67,8 +70,9 @@
             link: function(scope, el, attrs) {
               $('.title', el).on('click tap', function() {
                 angular.element('.content', el).toggle('fast');
+                var currentTag = angular.element('.content', el).attr('tag');
                 angular.element('.content').filter(function() {
-                    return angular.element(this).css('display') != 'none';
+                    return angular.element(this).css('display') != 'none' && angular.element(this).attr('tag') != currentTag;
                 }).toggle('fast');
               });
             }
