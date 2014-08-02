@@ -9,7 +9,7 @@ body {
   clear: both;
   width: 100%;
   height: 77px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 .element {
@@ -22,32 +22,31 @@ body {
 .image {
   display: block;
   float: left;
-  clear: both;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
 .text {
+  position: relative;
   float: left;
   font-weight: 400;
   line-height: 1.38;
 }
 
 .text-1 {
-  position: relative;
-  z-index: 2;
+  clear: both;
+  z-index: 1;
   width: 40.4166666666%;
   min-height: 40px;
-  margin: 9px 0 0 7.5%;
+  margin: 1px 0 0 7.5%;
   font-size: 1em;
   color: rgb(0, 0, 0);
 }
 
 .text-2 {
-  position: relative;
   clear: both;
-  z-index: 3;
+  z-index: 2;
   width: 14.3749999999%;
   min-height: 30px;
   margin: -14px 0 0 7.5%;
@@ -55,18 +54,26 @@ body {
   color: rgb(219, 219, 219);
 }
 
+.text-3 {
+  z-index: 3;
+  width: 14.3749999999%;
+  min-height: 30px;
+  margin: -40px 0 0 30.3125%;
+  font-size: 0.889em;
+  color: rgb(219, 219, 219);
+}
+
 .text-4 {
-  position: relative;
+  clear: both;
   z-index: 6;
   width: 40.4166666666%;
   min-height: 40px;
-  margin: 9px 0 0 7.5%;
+  margin: 1px 0 0 7.5%;
   font-size: 1em;
   color: rgb(0, 0, 0);
 }
 
 .text-5 {
-  position: relative;
   clear: both;
   z-index: 7;
   width: 14.3749999999%;
@@ -76,8 +83,8 @@ body {
   color: rgb(219, 219, 219);
 }
 
-.text-3,
 .text-6 {
+  z-index: 8;
   width: 14.3749999999%;
   min-height: 30px;
   margin: -40px 0 0 30.3125%;
