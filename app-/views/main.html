@@ -1,0 +1,9 @@
+<content padding="true" has-header="true" has-footer="false" scroll="true" on-refresh="onRefresh()">
+  <refresher></refresher>
+  <div ng-if='!datas'>Swipe to refresh countries list</div>
+  <h2 ng-if='datas'>Countries</h2>
+  <ul class="list" ng-cloak>
+    <li ng-repeat="data in datas" class="item">{{data.Name | lowercase}}</li>
+  </ul>
+    <button onclick="navigator.notification.alert(device.uuid);">Vibrate同学</button>
+</content>
