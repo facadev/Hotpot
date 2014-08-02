@@ -66,10 +66,10 @@
             //                templateUrl: 'collapsedListItemTemplate.htm',
             link: function(scope, el, attrs) {
               $('.title', el).on('click tap', function() {
+                angular.element('.content', el).toggle('fast');
                 angular.element('.content').filter(function() {
                     return angular.element(this).css('display') != 'none';
                 }).toggle('fast');
-                angular.element('.content', el).toggle('fast');
               });
             }
 
