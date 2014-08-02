@@ -1,9 +1,6 @@
 body {
-  height: 100%;
-  background: url('../images/QQ%E5%9B%BE%E7%89%8720140802145501.png') rgb(255, 255, 255);
-  background-size: cover;
-  background-position: 0% -30px;
-  font: 400 0.875em/1.38 Helvetica;
+  background-color: rgb(255, 255, 255);
+  font: 400 1.125em/1.38 Helvetica;
   color: rgb(0, 0, 0);
 }
 
@@ -24,13 +21,37 @@ body {
 }
 
 .text {
+  position: relative;
   float: left;
+  font-weight: 400;
+  line-height: 1.38;
+}
+
+.text-1 {
   clear: both;
+  z-index: 2;
   width: 40.4166666666%;
   min-height: 40px;
   margin: 9px 0 0 7.5%;
   font-size: 1em;
-  font-weight: 400;
-  line-height: 1.38;
   color: rgb(0, 0, 0);
+}
+
+.text-2 {
+  clear: both;
+  z-index: 3;
+  width: 14.3749999999%;
+  min-height: 30px;
+  margin: -14px 0 0 7.5%;
+  font-size: 0.889em;
+  color: rgb(219, 219, 219);
+}
+
+.text-3 {
+  z-index: 4;
+  width: 14.3749999999%;
+  min-height: 30px;
+  margin: -40px 0 0 30.3125%;
+  font-size: 0.889em;
+  color: rgb(219, 219, 219);
 }
