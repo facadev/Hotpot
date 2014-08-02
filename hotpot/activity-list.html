@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="hotpotApp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
@@ -10,51 +10,56 @@
     body {
       font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', 'STHeiti';
     }
+    ._input {
+      width: calc(100% - 52px);
+    }
   </style>
 </head>
-<body class="body activity-list clearfix">
+<body class="body activity-list clearfix" ng-controller="activityListCtrl">
   <div class="element clearfix">
     <p class="text">活动列表</p>
     <img class="image image-1" src="images/back.png">
     <img class="image image-2" src="images/filter.png">
     <img class="image image-3" src="images/add.png">
   </div>
-  <div class="list-item clearfix">
-    <div class="title clearfix">
+  <collapsed-list-item ng-repeat="activity in activities.v" class="list-item clearfix">
+        <div class="title clearfix">
       <img class="image image-4" src="images/jigsaw2.png">
       <img class="image image-5" src="images/jigsaw.png">
-      <p class="text text-2">只招苦逼IT男</p>
+      <p class="text text-2">{{activity.name}}</p>
       <p class="text text-3">3天后</p>
-      <p class="text text-4">6/6</p>
+      <p class="text text-4">{{activity.people_count}}/{{activity.limit_count}}</p>
       <button class="_button">退出</button>
     </div>
     <div class="content clearfix">
       <img class="image" src="images/jigsaw3.png">
-      <p class="text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+      <p class="text">{{activity.content}}</p>
       <img class="image image-7" src="images/jigsaw4.png">
     </div>
-  </div>
+  </collapsed-list-item>
     
-    <div class="list-item clearfix">
-    <div class="title clearfix">
-      <img class="image image-4" src="images/jigsaw2.png">
-      <img class="image image-5" src="images/jigsaw.png">
-      <p class="text text-2">只招苦逼IT男</p>
-      <p class="text text-3">3天后</p>
-      <p class="text text-4">6/6</p>
-      <button class="_button">退出</button>
-    </div>
-  </div>
+    <script type="text/ng-template" id="collapsedListItemTemplate.htm">
+    </script>
     
-    <div class="list-item clearfix">
-    <div class="title clearfix">
-      <img class="image image-4" src="images/jigsaw2.png">
-      <img class="image image-5" src="images/jigsaw.png">
-      <p class="text text-2">只招苦逼IT男</p>
-      <p class="text text-3">3天后</p>
-      <p class="text text-4">6/6</p>
-      <button class="_button">退出</button>
-    </div>
-  </div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script>
+        angular.module('hotpotApp',['ngResource'])
+        .controller('activityListCtrl', ['$scope', '$resource', function($scope, $resource) {
+            $scope.activities = $resource(
+                'http://testes.duapp.com/index.php/activity/activitylist', {},
+                {query:{method:'GET'}}).query();
+        }])
+        .directive('collapsedListItem', ['$resource', function($resource) {
+            return {
+                restrict: 'EA',
+//                templateUrl: 'collapsedListItemTemplate.htm',
+                link: function(scope, el, attrs) {
+                    
+                }
+                
+            };
+        }]);
+    </script>
 </body>
 </html>
