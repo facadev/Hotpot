@@ -1,10 +1,10 @@
 body {
   height: 100%;
   background: url('../images/QQ%E5%9B%BE%E7%89%8720140802145501.png') rgb(255, 255, 255);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% -30px;
-  font-size: 1em;
+  font: 400 1.813em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
 }
 
 .element {
@@ -20,6 +20,17 @@ body {
   clear: both;
   width: 100%;
   height: auto;
-  margin-top: 32px;
   overflow: hidden;
+}
+
+.text {
+  float: left;
+  clear: both;
+  width: 40.4166666666%;
+  min-height: 40px;
+  margin: 25px 0 0 7.5%;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
 }
